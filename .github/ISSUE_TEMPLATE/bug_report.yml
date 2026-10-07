@@ -1,0 +1,17 @@
+name: Bug report
+description: Report a reproducible problem in this product.
+body:
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and observed behavior
+      description: Include reproducible steps and a small shareable example. Remove private paths and credentials.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Version and environment
+      description: Product version or commit, operating system, and relevant tool versions.
+    validations:
+      required: true
