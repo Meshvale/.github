@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | ID | MESHVALE-CPP-001 |
-| Version | 0.1.0 |
+| Version | 0.2.0 |
 | Status | Living |
 | Owner | Meshvale organization community repository |
 | Applies to | Geometry, Interchange, Repair, Simplify, Validate |
@@ -32,6 +32,28 @@ Google's documented accessor and STL-like naming exceptions apply.
 `.clang-format`, using a formatter that supports its C++20 setting. Review names,
 ownership and API documentation separately: formatting does not prove compliance.
 Document public lifetimes, preconditions, failure and thread-safety guarantees.
+
+**CPP-008.** Give semantic values a name and an owner. Use typed, named constants
+for diagnostic codes, schema/property keys, format identifiers, sentinels, masks,
+dimensions, tolerances, thresholds and default limits. Names state purpose and,
+where applicable, units; document a non-obvious value's source or rationale. Prefer
+`constexpr` values, `std::string_view` for immutable text, `enum class` for finite
+states, and existing domain/SDK constants instead of duplicated literals.
+
+Keep a constant in the smallest owning scope; share it only when callers share
+the same contract. Put public compile-time values in their owning `.h` and private
+implementation values in `.cpp`. Configuration owns genuinely configurable
+values. Avoid unrelated global constant collections and names such as `kThree`
+that conceal meaning. Convert enums to stable wire strings at the serialization
+boundary; preserve published spellings, numeric values and failure behavior.
+
+Ordinary zero/one arithmetic, empty values, self-explanatory test inputs and
+human-facing prose at its diagnostic construction site may remain literal when
+they do not encode a hidden rule or machine-readable identifier. Repetition is
+not required for a value to need a name. Review each semantic literal in new or
+modified code; qualify legacy cleanup separately instead of claiming whole-repo
+compliance. Tests retain independent protocol expectations rather than deriving
+every expected value from the same production constant.
 
 ## Safety and product boundaries
 
