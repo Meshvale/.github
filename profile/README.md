@@ -6,7 +6,7 @@ Meshvale is an Apache-2.0 toolkit in early development. Geometry, Interchange an
 
 ## Try the development workflow
 
-Start with [Repair's OBJ commands](https://github.com/Meshvale/meshvale-repair/blob/main/docs/cli.md) and [installed command example](https://github.com/Meshvale/meshvale-repair/blob/main/examples/python/obj_commands.py). Build the exact public development dependencies described by the product; there is no package-index installation yet. The same operation is available through a reusable Python API, a single-asset command and an ordered batch command.
+Start with [the textured OBJ walkthrough](https://github.com/Meshvale/meshvale-repair/blob/main/docs/quickstart.md) and [Repair's OBJ commands](https://github.com/Meshvale/meshvale-repair/blob/main/docs/cli.md). Build the exact public development dependencies described by the product; there is no package-index installation yet. The same operation is available through a reusable Python API, a single-asset command and an ordered batch command.
 
 The operation preserves supported polygon loops and face-corner attributes while removing only the duplicates you select. OBJ resources are carried as opaque bytes and verified during publication. Reports identify what was checked, changed or left unresolved; this is a targeted repair, with [documented preservation and format limits](https://github.com/Meshvale/meshvale-repair/blob/main/docs/obj-workflow.md).
 
