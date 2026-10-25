@@ -10,6 +10,8 @@ Start with [the textured OBJ walkthrough](https://github.com/Meshvale/meshvale-r
 
 Other runnable entry points cover a [static glTF/GLB scene](https://github.com/Meshvale/meshvale-repair/blob/main/docs/gltf-scene-walkthrough.md), [OFF files](https://github.com/Meshvale/meshvale-repair/blob/main/docs/off-quickstart.md) and [typed PLY files](https://github.com/Meshvale/meshvale-repair/blob/main/docs/ply-walkthrough.md). Each product contract describes its admitted features, build options and preservation limits.
 
+For native integrations, Interchange provides opt-in [static FBX import](https://github.com/Meshvale/meshvale-interchange/blob/main/docs/fbx.md) and [USD polygon extraction](https://github.com/Meshvale/meshvale-interchange/blob/main/docs/usd.md). Their product contracts describe the required SDK builds and admitted content.
+
 The operation preserves supported polygon loops and face-corner attributes while removing only the duplicates you select. OBJ resources are carried as opaque bytes and verified during publication. Reports identify what was checked, changed or left unresolved; this is a targeted repair, with [documented preservation and format limits](https://github.com/Meshvale/meshvale-repair/blob/main/docs/obj-workflow.md).
 
 ## Products
